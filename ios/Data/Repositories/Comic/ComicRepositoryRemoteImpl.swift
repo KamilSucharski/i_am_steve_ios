@@ -3,9 +3,12 @@ import RxSwift
 
 struct ComicRepositoryRemoteImpl: ComicRepositoryRemote {
     
+    private let apiClient = APIClient()
+    
     func getComics() -> Observable<[Comic]> {
-        //todo
-        return Observable.empty()
+        return apiClient
+            .send<[ComicDTO]>(apiRequest: GetComicsRequest())
+            .map { ComicMapper.map($0) }
     }
     
     func getComicPanel(comicNumber: Int, panelNumber: Int) -> Observable<[UInt8]> {

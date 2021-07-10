@@ -1,14 +1,15 @@
 import Foundation
 import RxSwift
 
-final class APIClient {
-    private let httpClient = HTTPClient()
+class APIClient {
+    private let baseURL = URL(string: "https://iamsteve.neocities.org/")!
 
-    func execute(request: RequestType) -> Observable<Void> {
-        do {
-            return httpClient.execute(request: try request.build())
-        } catch {
-            return Observable.error(error)
-        }
+    func send<T: Codable>(apiRequest: APIRequest) -> Observable<T> {
+        let request = apiRequest.request(with: baseURL)
+        return URLSession.shared.rx.data(request: request)
+            .map {
+                try JSONDecoder().decode(T.self, from: data)
+            }
+            .observeOn(MainScheduler.asyncInstance)
     }
 }
