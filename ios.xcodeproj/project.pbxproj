@@ -28,6 +28,12 @@
 		8E9C39FC2690C15B0064E535 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C39FB2690C15B0064E535 /* iosApp.swift */; };
 		8E9C39FE2690C15B0064E535 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C39FD2690C15B0064E535 /* ContentView.swift */; };
 		8E9C3A002690C15C0064E535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9C39FF2690C15C0064E535 /* Assets.xcassets */; };
+		8EE1BF462699735B00715753 /* ComicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF452699735B00715753 /* ComicDTO.swift */; };
+		8EE1BF482699749600715753 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF472699749600715753 /* Mapper.swift */; };
+		8EE1BF4B2699754600715753 /* ComicMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF4A2699754600715753 /* ComicMapper.swift */; };
+		8EE1BF4F2699791B00715753 /* ComicRepositoryLocalImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF4E2699791B00715753 /* ComicRepositoryLocalImpl.swift */; };
+		8EE1BF522699794100715753 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF512699794100715753 /* LocalStorage.swift */; };
+		8EE1BF5426997CFC00715753 /* ComicRepositoryRemoteImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1BF5326997CFC00715753 /* ComicRepositoryRemoteImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		8E9C39FD2690C15B0064E535 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E9C39FF2690C15C0064E535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9C3A0C2690C49D0064E535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EE1BF452699735B00715753 /* ComicDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDTO.swift; sourceTree = "<group>"; };
+		8EE1BF472699749600715753 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		8EE1BF4A2699754600715753 /* ComicMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicMapper.swift; sourceTree = "<group>"; };
+		8EE1BF4E2699791B00715753 /* ComicRepositoryLocalImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepositoryLocalImpl.swift; sourceTree = "<group>"; };
+		8EE1BF512699794100715753 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		8EE1BF5326997CFC00715753 /* ComicRepositoryRemoteImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepositoryRemoteImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8E989E762691C52E00B4BA86 /* Operation.swift */,
+				8EE1BF472699749600715753 /* Mapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,10 +214,10 @@
 		8E9C39FA2690C15B0064E535 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				8E989E6D2691C17800B4BA86 /* System */,
-				8E9C3A0B2690C47B0064E535 /* Presentation */,
-				8E9C3A0A2690C4740064E535 /* Domain */,
 				8E9C3A092690C46A0064E535 /* Data */,
+				8E9C3A0A2690C4740064E535 /* Domain */,
+				8E9C3A0B2690C47B0064E535 /* Presentation */,
+				8E989E6D2691C17800B4BA86 /* System */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -212,6 +225,10 @@
 		8E9C3A092690C46A0064E535 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8EE1BF502699793300715753 /* Utils */,
+				8EE1BF4C269978E100715753 /* Repositories */,
+				8EE1BF492699753200715753 /* Mappers */,
+				8EE1BF44269972FC00715753 /* DTO */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -236,6 +253,47 @@
 				8E9C39FD2690C15B0064E535 /* ContentView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8EE1BF44269972FC00715753 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1BF452699735B00715753 /* ComicDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		8EE1BF492699753200715753 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1BF4A2699754600715753 /* ComicMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8EE1BF4C269978E100715753 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1BF4D269978FE00715753 /* Comic */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8EE1BF4D269978FE00715753 /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1BF4E2699791B00715753 /* ComicRepositoryLocalImpl.swift */,
+				8EE1BF5326997CFC00715753 /* ComicRepositoryRemoteImpl.swift */,
+			);
+			path = Comic;
+			sourceTree = "<group>";
+		};
+		8EE1BF502699793300715753 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1BF512699794100715753 /* LocalStorage.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,23 +374,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9C39FE2690C15B0064E535 /* ContentView.swift in Sources */,
+				8EE1BF4F2699791B00715753 /* ComicRepositoryLocalImpl.swift in Sources */,
 				8E989E862691CF5600B4BA86 /* PreloadComicsOperation.swift in Sources */,
 				8E989E742691C45800B4BA86 /* ComicRepositoryRemote.swift in Sources */,
 				8E989E842691CD5D00B4BA86 /* GetComicsOperation.swift in Sources */,
+				8EE1BF482699749600715753 /* Mapper.swift in Sources */,
 				8E66DA992691A44E0083B5C4 /* ArchiveView.swift in Sources */,
 				8E989E722691C31A00B4BA86 /* ComicRepositoryLocal.swift in Sources */,
 				8E66DA9E2691A59B0083B5C4 /* ComicPanels.swift in Sources */,
 				8E66DA9C2691A4E30083B5C4 /* Comic.swift in Sources */,
+				8EE1BF522699794100715753 /* LocalStorage.swift in Sources */,
 				8E66DA962691A3F00083B5C4 /* StartView.swift in Sources */,
 				8E989E7F2691C79900B4BA86 /* Container.swift in Sources */,
 				8E989E6C2691C0D800B4BA86 /* ComicGalleryView.swift in Sources */,
 				8E66DA8F2691A01B0083B5C4 /* BasePresenter.swift in Sources */,
+				8EE1BF4B2699754600715753 /* ComicMapper.swift in Sources */,
 				8E9C39FC2690C15B0064E535 /* iosApp.swift in Sources */,
 				8E989E772691C52E00B4BA86 /* Operation.swift in Sources */,
 				8E989E792691C57100B4BA86 /* GetComicPanelsOperation.swift in Sources */,
+				8EE1BF5426997CFC00715753 /* ComicRepositoryRemoteImpl.swift in Sources */,
 				8E989E812691C7B100B4BA86 /* Module.swift in Sources */,
 				8E989E6A2691C03600B4BA86 /* ComicView.swift in Sources */,
 				8E66DA912691A0DA0083B5C4 /* BaseView.swift in Sources */,
+				8EE1BF462699735B00715753 /* ComicDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

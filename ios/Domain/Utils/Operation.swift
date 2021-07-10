@@ -1,7 +1,7 @@
 import Foundation
 
-protocol Operation {
-    associatedtype T
+public protocol Operation {
+    associatedtype Result
     
-    func execute() -> T
+    func execute() -> Result
 }
