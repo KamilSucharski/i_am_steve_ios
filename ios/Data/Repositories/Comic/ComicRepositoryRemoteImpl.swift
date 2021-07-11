@@ -7,12 +7,16 @@ struct ComicRepositoryRemoteImpl: ComicRepositoryRemote {
     
     func getComics() -> Observable<[Comic]> {
         return apiClient
-            .send<[ComicDTO]>(apiRequest: GetComicsRequest())
-            .map { ComicMapper.map($0) }
+            .send(apiRequest: GetComicsRequest())
+            .map { [ComicDTO] in ComicMapper.map($0) }
     }
     
     func getComicPanel(comicNumber: Int, panelNumber: Int) -> Observable<[UInt8]> {
-        //todo
-        return Observable.empty()
+        return apiClient
+            .send(apiRequest: GetComicPanelRequest(fileName: String(
+                format: Consts.COMIC_PANEL_FILE_NAME_FORMAT,
+                comicNumber,
+                panelNumber
+            )))
     }
 }

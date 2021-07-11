@@ -14,6 +14,7 @@
 		8E66DA992691A44E0083B5C4 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66DA982691A44E0083B5C4 /* ArchiveView.swift */; };
 		8E66DA9C2691A4E30083B5C4 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66DA9B2691A4E30083B5C4 /* Comic.swift */; };
 		8E66DA9E2691A59B0083B5C4 /* ComicPanels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66DA9D2691A59B0083B5C4 /* ComicPanels.swift */; };
+		8E6BA4A7269ADA72005F7E66 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BA4A6269ADA72005F7E66 /* Consts.swift */; };
 		8E70FD68269A194400E57848 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70FD67269A194400E57848 /* APIRequest.swift */; };
 		8E70FD6A269A1A6C00E57848 /* GetComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70FD69269A1A6C00E57848 /* GetComicsRequest.swift */; };
 		8E70FD6C269A1ADF00E57848 /* GetComicPanelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70FD6B269A1ADF00E57848 /* GetComicPanelRequest.swift */; };
@@ -48,6 +49,7 @@
 		8E66DA982691A44E0083B5C4 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		8E66DA9B2691A4E30083B5C4 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		8E66DA9D2691A59B0083B5C4 /* ComicPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicPanels.swift; sourceTree = "<group>"; };
+		8E6BA4A6269ADA72005F7E66 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		8E70FD67269A194400E57848 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		8E70FD69269A1A6C00E57848 /* GetComicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicsRequest.swift; sourceTree = "<group>"; };
 		8E70FD6B269A1ADF00E57848 /* GetComicPanelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicPanelRequest.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				8E989E762691C52E00B4BA86 /* Operation.swift */,
 				8EE1BF472699749600715753 /* Mapper.swift */,
+				8E6BA4A6269ADA72005F7E66 /* Consts.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				8E70FD6A269A1A6C00E57848 /* GetComicsRequest.swift in Sources */,
 				8E9C39FE2690C15B0064E535 /* ContentView.swift in Sources */,
 				8EE1BF4F2699791B00715753 /* ComicRepositoryLocalImpl.swift in Sources */,
+				8E6BA4A7269ADA72005F7E66 /* Consts.swift in Sources */,
 				8E989E862691CF5600B4BA86 /* PreloadComicsOperation.swift in Sources */,
 				8E132D6D2699A29300630D4F /* APIClient.swift in Sources */,
 				8E989E742691C45800B4BA86 /* ComicRepositoryRemote.swift in Sources */,
