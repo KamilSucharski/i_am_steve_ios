@@ -1,22 +1,29 @@
 import Foundation
+import RxSwift
 
 struct ComicRepositoryLocalImpl: ComicRepositoryLocal {
     
-    func saveComics(comics: [Comic]) {
-        //todo
+    func getComicsFromAssets() -> Single<[Comic]> {
+        
     }
     
-    func loadComics() -> [Comic]? {
-        //todo
-        return nil
+    func getComicsFromLocalStorage() -> Single<[Comic]> {
+        
     }
     
-    func saveComicPanel(comicNumber: Int, panelNumber: Int, byteArray: [UInt8]) -> URL {
-        //todo
+    func saveComicsToLocalStorage(comics: [Comic]) {
+        
     }
     
-    func loadComicPanel(comicNumber: Int, panelNumber: Int) -> URL? {
-        //todo
-        return nil
+    func getComicPanelFromAssets(comicNumber: Int, panelNumber: Int) -> Single<[UInt8]> {
+        
+    }
+    
+    func getComicPanelFromLocalStorage(comicNumber: Int, panelNumber: Int) -> Single<[UInt8]> {
+        
+    }
+    
+    func saveComicPanelToLocalStorage(comicNumber: Int, panelNumber: Int, byteArray: [UInt8]) -> [UInt8] {
+        
     }
 }
