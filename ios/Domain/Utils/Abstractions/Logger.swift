@@ -1,8 +1,7 @@
-//
-//  Logger.swift
-//  ios
-//
-//  Created by Kamil on 24/07/2021.
-//
-
 import Foundation
+
+public protocol Logger {
+    func debug(string: String)
+    func error(string: String)
+    func error(string: String, error: Error)
+}

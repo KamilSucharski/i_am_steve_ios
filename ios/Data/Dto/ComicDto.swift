@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ComicDTO: Codable {
+public struct ComicDto: Codable {
     public let number: Int
     public let title: String
     public let date: String

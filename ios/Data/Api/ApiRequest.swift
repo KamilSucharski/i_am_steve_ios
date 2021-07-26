@@ -1,12 +1,12 @@
 import Foundation
 
-protocol APIRequest {
+protocol ApiRequest {
     var method: RequestType { get }
     var path: String { get }
     var parameters: [String : String] { get }
 }
 
-extension APIRequest {
+extension ApiRequest {
     func request(with baseURL: URL) -> URLRequest {
         guard var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: false) else {
             fatalError("Unable to create URL components")

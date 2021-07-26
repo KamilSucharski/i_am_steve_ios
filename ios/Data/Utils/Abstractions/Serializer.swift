@@ -1,8 +1,6 @@
-//
-//  Serializer.swift
-//  ios
-//
-//  Created by Kamil on 24/07/2021.
-//
-
 import Foundation
+
+public protocol Serializer {
+    func serialize(value: AnyObject) -> String
+    func deserialize(value: String) //todo return tyoe
+}

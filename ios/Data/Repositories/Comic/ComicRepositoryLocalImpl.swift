@@ -26,4 +26,9 @@ struct ComicRepositoryLocalImpl: ComicRepositoryLocal {
     func saveComicPanelToLocalStorage(comicNumber: Int, panelNumber: Int, byteArray: [UInt8]) -> [UInt8] {
         
     }
+    
+
+    func removeComicPanelFromLocalStorage(comicNumber: Int, panelNumber: Int) {
+        
+    }
 }
